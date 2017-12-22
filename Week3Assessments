@@ -1,0 +1,111 @@
+Week 3 Assessment
+
+1. Here is a list of pros and cons to using the React library to build your application -- but some of them are false. Remove the false statements from the list:
+
+React is a modern, efficient answer to complex UI applications
+
+React is a full stack framework for modern web applications
+
+
+
+
+2. What are "smart" and "dumb" components? Explain the difference and also add why we bother to make the distinction between them.
+
+//Your Answer
+    Smart components are ones that are static and can React to change, whereas dumb components are static and cannot be changed or updated.
+//Googled Answer
+mart means “container” or “app-level”. Some have compared it to the “C” in MVC. Dumb means “presentational” or “ui only”, possibly comparable to the “V” in MVC.
+
+
+3. Write a simple component that simply prints "I am a dumb component" to the screen. Be sure to include all necessary imports, expots, etc...
+
+import React, { Component } from 'react'
+
+class Dumb extends React.Component{
+    render(){
+        return(
+            <div>
+                <h1>I am a dumb component.</h1>
+            </div>
+        );
+    }
+}
+
+Export default Dumb
+
+
+4. When we use "yarn add ..." in the terminal - what is yarn doing? And what file will always be automatically updated after we add a package with yarn?
+
+//Your Answer
+    Yarn adds packages that contain libraries of pre-written code from other developers.
+
+
+//Googled Answer
+    A package manager of Javascript, where developers share hundreds of thousands of pieces of code so we can avoid rewriting basic components, libraries, and framework.
+
+
+
+5. There are three mistakes in this code that would cause it to break our application. Find the mistakes and fix them:
+import React, { Component } from 'react';
+
+class Recipes {
+  constructor(props){
+    super(props)
+    this.state = {
+      recipes:[
+         'Meatballs',
+         'Mac & Cheese'
+        ]
+    }
+  }
+
+  render() {
+
+    return (
+    <div>
+      let recipes = this.state.recipes.map(function(recipe){
+        return(
+          <li key={recipe.name}>{recipe.name}</li>
+        )
+      })
+
+      <ul>
+        {recipes}
+      </ul>
+
+    </div>
+    );
+  }
+}
+
+export default Recipes;
+
+
+
+6. Name three input types. (NOTE: text is the default type - so it doesn't count in this case)
+//Your Answer
+    Integer, varchar, string
+//Googled Answer
+    Color, date, email, month, range, number, search.
+
+7. How would you explain state to a friend who doesn't know code?
+//Your Answer
+    State checks differences between the local copy and the one on the server, and updates any changes that have happened in real time. i.e Comments, likes, and uploads.
+//Googled Answer
+    State is used for smart components, allows you to reuse a component skeleton and fill in the information conditional to the situation.
+
+8. What is the difference between component state and props? Your answer should include a short explanation of both.
+    They are all key aspects of using React. Components allow you to write template code one time that can be used in a multitude of situations, these components are imported and exported to different parts of the app. State is what allows you to fill in those gaps special for the condition that you are in. And props are the primary mode of information transfer in React, they are sent from component to component.
+
+9. Name three benefits of testing and TDD:
+//Your Answer
+    Helps you plan your code a little bit better, assures that your code is written correctly at each step, and promotes a different work flow.
+//Googled Answer
+    Cuts development cost, shortens dev Time to Market, increases productivity, provides feedback as you're working.
+
+
+10. List two helpful testing matchers and two helpful enzyme simulators that we can use when writing our tests:
+//Your Answer
+    onClick allows you to simulate what would happen if someone clicked a certain thing on your webpage.
+//Googled Answer
+    
